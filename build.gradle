@@ -37,6 +37,8 @@ dependencies {
 	// jdbc(jpa)
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	runtimeOnly	'org.postgresql:postgresql'
+	// flywaydb
+	implementation 'org.flywaydb:flyway-core'
 
 	annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
 
