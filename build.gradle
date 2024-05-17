@@ -17,6 +17,7 @@ repositories {
 
 ext {
 	set('springCloudVersion', "2023.0.1")
+	set('testcontainersVersion', "1.19.3")
 }
 
 // 프로젝트 빌드할 때 그래들이 설정 프로세서를 사용하도록 설정한다.
@@ -47,6 +48,7 @@ dependencies {
 dependencyManagement {
 	imports {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+		mavenBom "org.testcontainers:testcontainers-bom:${testcontainersVersion}"
 	}
 }
 
