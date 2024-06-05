@@ -6,12 +6,15 @@ server:
     threads:
       max: 50
       min-spare: 5
+  shutdown: graceful # 우아한 종료 활성화
 
 spring:
   application:
     name: catalog-service
   config:
     import: "optional:configserver:"
+  lifecycle:
+    timeout-per-shutdown-phase: 15s # 15초의 종료 기간을 둔다. (default 30초)
   cloud:
     config:
       uri: http://localhost:8888
